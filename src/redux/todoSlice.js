@@ -21,13 +21,11 @@ const todoSlice = createSlice({
       return state.filter((item) => item.id !== action.payload.id);
     },
     editItem: (state, action) => {
-      const index = state.findIndex((item) => item.id === action.payload.id);
-      //   const curContent = state[index].content
-      const newContent = action.payload.content;
-      state[index].content = newContent;
-      //   state[index].isEdit = true;
-
-      return state;
+      state.map((item) => {
+        if (item.id === action.payload.id) {
+          item.content = action.payload.content;
+        }
+      });
     },
   },
 });

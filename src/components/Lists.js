@@ -4,11 +4,7 @@ import Item from "./Item";
 
 const Lists = () => {
   const todos = useSelector((state) => state.todos);
-  //   const todos = [
-  //     { id: 1, content: "aaaaaaaa", isEdit: false },
-  //     { id: 2, content: "bbbbbbbbbb", isEdit: false },
-  //     { id: 3, content: "ccccccccccc", isEdit: true },
-  //   ];
+
   return (
     <ul className="list-group mt-5">
       {todos.map((todo) => (

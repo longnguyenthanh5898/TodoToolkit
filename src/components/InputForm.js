@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addList, editItem } from "../redux/todoSlice";
 const InputForm = () => {
